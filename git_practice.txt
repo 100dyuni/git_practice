@@ -1,0 +1,71 @@
+Git 
+참고 페이지 : https://www.yalco.kr/lectures/git-github/
+
+세션1.
+
+VScode 에서 control +` -> 터미널 
+
+Git init -> 이폴더는 이제 깃이 관리한다 선언 .git이라는 파일이 생성되며 지우면 제대로 관리를 못하게됨 
+Git status -> 관리할 파일들 출력
+
+관리를 배제할 파일 폴더 설정하기
+.gitignore 파일을 생성하여 해당내역 작성
+
+
+세션2.
+Git add . -> 모든파일 대상화
+Git kommt -> 커밋시 vi에디터 실행 i 누르고 메모 입력 후 저장하고 나온다 
+
+Git commit -am 파일이 추가되었을때 사용 없으면 에러가날 수 잇음, add와 commit을 한꺼번에 
+
+Reset vs Revert
+리셋은 그시점으로 돌아가는거 리버트는 돌리되 기록내용들을 남겨둔다 
+
+숨긴파일 보는 단축기
+Command + shift + . 
+
+983d8c44a176864af264cc639605d82b6474d215
+
+되돌리는 방법
+1. Git log 명령어를 수행하여 reset시점은 코드를 알아낸다
+2. Git reset —hard (코드) // 만약 코드를 넣지 않을경우 마지막 커밋상태로 돌아감
+
+협업할때는 되도록이면 revert명령어를 실행 공유되는 자원 한에서
+
+Git revert —no-commit (시점)
+이번커밋에서 리버트랑 다른거 추가후 커밋할경우
+
+
+세션3
+Branch 만들기
+
+Git switch [name]
+git log --all --decorate --oneline --graph  //모든 브런치 내역보기
+
+Branch 합치기
+Merge vs rebase
+Merge : 두 브랜치를 한 커밋에 이어붙임
+Rebase :브랜치를 다른 브랜치에이어 붙임
+차이는 히스토리 내역 머지의 경우 브랜치의 사용 내용을 남겨둔다
+
+
+세션4
+
+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
+
+git remote add origin https://github.com/100dyuni/git_practice.git
+git branch -M main
+git push -u origin main
+
+Git remote - 연결된 원격목록 옵션 -v
+
+Giir remote remove (원격이름)
+
+Git clone (원격주소)
+
+Git pull —no-rebase
+
+Git push —force
+
+서버의 브런치를 로컬로 받아올대
+Git fetch
